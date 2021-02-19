@@ -1,0 +1,143 @@
+html {
+    min-height: 100vh;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+}
+
+body {
+    display: flexbox;
+    background: rgb(83, 172, 144);
+    background: -moz-linear-gradient(122deg, rgba(83, 172, 144, 1) 0%, rgba(72, 130, 98, 1) 50%, rgba(68, 124, 95, 1) 67%, rgba(41, 85, 71, 1) 100%, rgba(39, 82, 69, 0.969625350140056) 100%);
+    background: -webkit-linear-gradient(122deg, rgba(83, 172, 144, 1) 0%, rgba(72, 130, 98, 1) 50%, rgba(68, 124, 95, 1) 67%, rgba(41, 85, 71, 1) 100%, rgba(39, 82, 69, 0.969625350140056) 100%);
+    background: linear-gradient(122deg, rgba(83, 172, 144, 1) 0%, rgba(72, 130, 98, 1) 50%, rgba(68, 124, 95, 1) 67%, rgba(41, 85, 71, 1) 100%, rgba(39, 82, 69, 0.969625350140056) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#53ac90", endColorstr="#275245", GradientType=1);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    min-height: 4rem;
+    min-width: 100%;
+    background-color: white;
+}
+
+nav {
+    margin-left: auto;
+    margin-right: 1rem;
+    margin-top: .7rem;
+    float: right;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    align-self: right;
+    padding: .5rem;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+nav a:hover {
+    color: rgba(39, 82, 69, 0.969625350140056);
+}
+
+.container {
+    display: block;
+    align-self: center;
+    margin: 15% auto;
+    max-width: 40%;
+    max-height: 30%;
+    border: 1px black solid;
+    background-color: white;
+    -webkit-box-shadow: 1px 3px 19px 9px #000000;
+    box-shadow: 1px 3px 19px 9px #000000;
+    align-content: center;
+}
+
+.container form {
+    font-size: 18px;
+    max-width: fit-content;
+    align-self: center;
+    margin: 10% auto;
+}
+
+.container h1 {
+    align-self: center;
+    margin-bottom: 2rem;
+}
+
+.container form .field {
+    align-self: center;
+    background-color: rgba(68, 124, 95, 1);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: .4rem 2rem;
+    align-self: center;
+}
+
+#submit-btn {
+    align-self: center;
+    margin-left: 2rem;
+    margin-top: .5rem;
+    padding: .5rem 2rem;
+    border: none;
+    background-color: rgba(39, 82, 69, 0.969625350140056);
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#submit-btn:hover {
+    background: rgb(83, 172, 144);
+    background: -moz-linear-gradient(180deg, rgba(83, 172, 144, 1) 0%, rgba(62, 129, 108, 1) 0%, rgba(58, 121, 101, 1) 39%, rgba(53, 110, 92, 1) 65%, rgba(41, 85, 71, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(83, 172, 144, 1) 0%, rgba(62, 129, 108, 1) 0%, rgba(58, 121, 101, 1) 39%, rgba(53, 110, 92, 1) 65%, rgba(41, 85, 71, 1) 100%);
+    background: linear-gradient(180deg, rgba(83, 172, 144, 1) 0%, rgba(62, 129, 108, 1) 0%, rgba(58, 121, 101, 1) 39%, rgba(53, 110, 92, 1) 65%, rgba(41, 85, 71, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#53ac90", endColorstr="#295547", GradientType=1);
+    transition: .5s;
+}
+
+#admin-btn {
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5rem 2rem;
+    border: none;
+    background-color: rgba(39, 82, 69, 0.969625350140056);
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#admin-btn:hover {
+    background: rgb(83, 172, 144);
+    background: -moz-linear-gradient(180deg, rgba(83, 172, 144, 1) 0%, rgba(62, 129, 108, 1) 0%, rgba(58, 121, 101, 1) 39%, rgba(53, 110, 92, 1) 65%, rgba(41, 85, 71, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(83, 172, 144, 1) 0%, rgba(62, 129, 108, 1) 0%, rgba(58, 121, 101, 1) 39%, rgba(53, 110, 92, 1) 65%, rgba(41, 85, 71, 1) 100%);
+    background: linear-gradient(180deg, rgba(83, 172, 144, 1) 0%, rgba(62, 129, 108, 1) 0%, rgba(58, 121, 101, 1) 39%, rgba(53, 110, 92, 1) 65%, rgba(41, 85, 71, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#53ac90", endColorstr="#295547", GradientType=1);
+    transition: .5s;
+}
+
+@media (max-width: 740px) {
+    header {
+        display: block;
+    }
+    .container {
+        display: block;
+        margin-top: 25%;
+        max-width: 60%;
+        max-height: 70%;
+    }
+    .container form {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #admin-btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

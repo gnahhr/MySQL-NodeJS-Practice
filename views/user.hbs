@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <title>DASHBOARD | DBMS Group 7</title>
+</head>
+
+<body>
+    <header>
+        <div class="dashboard">
+            <h1>DASHBOARD</h1>
+            <p>Welcome, {{user}}!</p>
+        </div>
+    </header>
+
+    <aside>
+        <nav>
+            <ul>
+                {{#if isAdmin}}
+                <li>
+                    <form action="/show-log" method="post">
+                    <input type="submit" value="SHOW LOG" id="show-log-link"><br>
+                    </form>
+                </li>
+                {{/if}}
+                <li>
+                    <a href="/" class="log-out">LOG OUT</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="screen">
+        {{#if isAdmin}}
+                <h1>Admin Privileges shown at the left bar.</h1>
+        {{/if}}
+
+        {{#if isUser}}
+        
+        <div class="userPanel">
+            {{#each data}}
+            <img src="../public/dummy-pic.png" alt="userpic" id="userpic">
+            <h1>User Profile</h1>
+            <div class="userData">
+                <p>Student Number: {{studentnum}}</p>
+                <p>Name: {{lname}}, {{fname}} {{mname}}</p>
+                <p>E-mail: {{email}}</p>
+            </div>
+            {{/each}}
+        </div>
+        
+        {{/if}}
+
+        {{#if showLog}}
+        <table>
+            <tr>
+                <th>DATE</th>
+                <th>ACTION</th>
+                <th>USER</th>
+            </tr>
+            {{#each log}}
+            <tr>
+                <td>{{logDate}}</td>
+                <td>{{logData}}</td>
+                <td>{{logUser}}</td>
+            </tr>
+            {{/each}}
+        </table>
+        {{/if}}
+    </div>
+
+    <div id="logout-btn">
+        <a href="/" class="log-out">LOG OUT</a>
+    </div>
+</body>
+
+</html>
