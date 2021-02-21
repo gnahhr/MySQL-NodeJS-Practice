@@ -81,7 +81,6 @@ exports.login_user = (req, res) => {
             getConnection().query(insertLog, [results[0].studentnum, username, username], (err, results) => results);
             console.log("You have logged in");
 
-
             //Goes to the user page displaying user profile
             return res.render("user", {
                 user: username,
@@ -101,15 +100,15 @@ exports.login_admin = (req, res) => {
     //Gets values from tbladmin where the admin data are managed
     const queryString = "SELECT password FROM tbladmin WHERE username = ?;";
     getConnection().query(queryString, [user], (err, results) => {
-        console.log(results);
         if (err) {
             console.log("Error insertion");
             return;
         }
         if (results.length < 1 || (pass !== results[0].password)) {
             console.log("No user registered");
-            return res.render('log-in_admin', {
+            return res.render('log-in', {
                 message: 'Wrong username/password.',
+                admin: 1,
             })
         } else {
             //Inserts the log in history into the log table

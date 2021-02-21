@@ -67,6 +67,7 @@ nav a:hover {
 }
 
 .container h1 {
+    text-align: center;
     align-self: center;
     margin-bottom: 2rem;
 }
@@ -79,6 +80,17 @@ nav a:hover {
     color: white;
     padding: .4rem 2rem;
     align-self: center;
+}
+
+.inputs {
+    display: block;
+    max-width: fit-content;
+}
+
+.inputs input,
+.inputs label {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #submit-btn {
@@ -120,6 +132,15 @@ nav a:hover {
     background: linear-gradient(180deg, rgba(83, 172, 144, 1) 0%, rgba(62, 129, 108, 1) 0%, rgba(58, 121, 101, 1) 39%, rgba(53, 110, 92, 1) 65%, rgba(41, 85, 71, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#53ac90", endColorstr="#295547", GradientType=1);
     transition: .5s;
+}
+
+#reg-done {
+    padding: 15%;
+}
+
+#reg-done h1,
+#reg-done h3 {
+    text-align: center;
 }
 
 @media (max-width: 740px) {

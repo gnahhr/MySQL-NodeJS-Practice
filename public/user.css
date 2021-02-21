@@ -55,12 +55,16 @@ aside {
     float: left;
     max-width: max-content;
     min-height: 100vh;
-    background-color: rgba(72, 130, 98, 1);
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(0deg, rgba(255, 255, 255, 0) 17%, rgba(182, 205, 192, 1) 31%, rgba(72, 130, 98, 1) 45%, rgba(72, 130, 98, 1) 57%, rgba(72, 130, 98, 1) 73%, rgba(72, 130, 98, 1) 88%, rgba(72, 130, 98, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0) 17%, rgba(182, 205, 192, 1) 31%, rgba(72, 130, 98, 1) 45%, rgba(72, 130, 98, 1) 57%, rgba(72, 130, 98, 1) 73%, rgba(72, 130, 98, 1) 88%, rgba(72, 130, 98, 1) 100%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 17%, rgba(182, 205, 192, 1) 31%, rgba(72, 130, 98, 1) 45%, rgba(72, 130, 98, 1) 57%, rgba(72, 130, 98, 1) 73%, rgba(72, 130, 98, 1) 88%, rgba(72, 130, 98, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#488262", GradientType=1);
+    top: 0;
+    left: 0;
 }
 
 nav ul {
-    display: flexbox;
-    flex-direction: column;
     list-style: none;
 }
 
@@ -72,9 +76,11 @@ nav ul li {
     margin: 1.5rem;
 }
 
-nav ul li:last-child {
+#log-out {
     margin-top: auto;
     margin-bottom: 0;
+    bottom: 0;
+    left: 0;
 }
 
 nav ul li a {
